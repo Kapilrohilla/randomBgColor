@@ -1,0 +1,26 @@
+@mixin tocenter(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin textFromat(){
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace, sans-serif;
+}
+@mixin buttonFormat(){
+    height: 50px;
+    width: 200px;
+    ///background: transparent;
+    box-shadow:  2px 2px 2px 2px #272727;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    button{
+        @include tocenter();
+        @include textFromat(); 
+        @include buttonFormat();
+    }
+}
